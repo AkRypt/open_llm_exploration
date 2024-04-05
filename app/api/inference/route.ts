@@ -8,7 +8,7 @@ export async function query(data: any) {
         // "https://api-inference.huggingface.co/models/keeeeenw/MicroLlama", // Nice small model
         "https://api-inference.huggingface.co/models/morenolq/bart-it",
 		{
-			headers: { Authorization: "Bearer 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" },
+			headers: { Authorization: `Bearer ${process.env.HUGGING_FACE_TOKEN}` },
 			method: "POST",
 			body: JSON.stringify({
                 ...data,
